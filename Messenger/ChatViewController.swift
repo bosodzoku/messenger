@@ -22,7 +22,7 @@ class ChatViewController: JSQMessagesViewController {
     //just do something when VC loads
     override func viewDidLoad() {
         super.viewDidLoad()
-        //to obtain and show messages from Firebas
+        //to obtain and show messages from Firebase
         let query = Constants.refs.databaseChats.queryLimited(toLast: 24) //create a query to get the last x chat messages
         _ = query.observe(.childAdded, with:
             //Firebase now starts “observing” the query for changes. When a new chat message is typed and sent by didPressSend(), it’s returned via the observer function
